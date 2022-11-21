@@ -50,8 +50,25 @@
   border-radius: 5px;
 }
 #info-principal{
-  margin-bottom: 30px;
-
+  margin: 30px;
+}
+#actualites{
+  margin: 30px;
+}  
+#cards{
+  margin: 30px;
+}
+#dernieresVideo{
+  margin: 30px;
+}
+#artistesAfrikZik{
+  margin: 30px;
+}
+#arriere_fond{
+  background-color: rgba(6, 83, 4, 0.774);
+}
+.fond{
+  background-color: aliceblue;
 }
 .card{
   width: 100%;
@@ -84,4 +101,25 @@
 }
 .ii{
   width: 100%;
+}
+.img_play{
+  position: absolute;
+  width: 50px;
+ 
+  margin-left: 40%;
+  margin-top: 25%;
+}
+.liste{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cercle{
+  background-color: brown;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 4px 0px 0px 13px;
+  color: aliceblue;
 }
