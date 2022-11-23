@@ -123,3 +123,98 @@
   padding: 4px 0px 0px 13px;
   color: aliceblue;
 }
+.partie-1{
+  display: block;
+  width: 65%;
+}
+.partie-2{
+  display: block;
+  width: 34%;
+}
+.partie-2-1{
+  display: block;
+  width: 49%;
+}
+.partie-2-2{
+  display: block;
+  width: 50%;
+}
+.containerTopMusic{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center ;
+  gap: 9px;
+}
+.containerPrincipal{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.actualitesGauche{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.containerActualites{
+  display: flex;
+  flex-wrap: wrap;
+}
+.actualitesGauche{
+  display: flex;
+  flex-wrap: wrap;
+}
+.carte{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: blue;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.imageCarousel{
+  height: 500px;
+}
+.imageActualite{
+  width: 200px;
+}
+
+
+@media screen and (max-width: 1245px) {
+  .containerPrincipal{display: block;}
+  .partie-1{
+    width: 90%;
+    margin-left: 5%;
+  }
+  .partie-2{
+    width: 90%;
+    margin-left: 5%;
+  }
+  .containerActualites{display: block;}
+  .partie-2-1{
+    width: 90%;
+    margin-left: 5%;
+  }
+  .partie-2-2{
+    width: 90%;
+    margin-left: 5%;
+  }
+  
+}
+@media screen and (max-width: 800px) {
+  
+  .imageCarousel{
+    height: 450px;
+  }  
+}
+@media screen and (max-width: 400px) {
+  
+  .imageCarousel{
+    height: 300px;
+  }  
+}
