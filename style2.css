@@ -36,6 +36,14 @@ body {
   position: relative;
 }
 
+#containerTopMusic .carte {
+  transition: transform 5s ease-out;
+}
+
+#containerTopMusic .carte:hover {
+  transform: translateX(10px);
+}
+
 .act,
 .navbar ul li a:hover {
   color: var(--main-color) !important;
@@ -72,8 +80,18 @@ body {
   border-radius: 5px;
 }
 
-#info-principal{
+#info-principal {
   margin: 30px;
+}
+
+.text-primary,
+#info-principal h2
+{
+  font-weight: bold;
+}
+
+.carousel-inner {
+  border-radius: 10px;
 }
 
 #actualites{
@@ -88,9 +106,8 @@ body {
   border-radius: 5px;
 }
 
-.row .text-center {
+.text-center {
   font-weight: bold;
-  border: 1px solid #FFF;
 }
 
 #dernieresVideo{
