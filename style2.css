@@ -1,10 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --main-color: #e6b30e;
+}
+
+body {
+  /* margin: auto; */
+  background-image: url(images/bg5.webp);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: 100% auto;
+  position: relative;
+  /* backdrop-filter: blur(5px); */
+}
+
 #header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("images/bg.jpg");
@@ -14,14 +35,21 @@
   height: 85vh;
   position: relative;
 }
-:root {
-  --main-color: #e6b30e;
+
+#containerTopMusic .carte {
+  transition: transform 5s ease-out;
 }
+
+#containerTopMusic .carte:hover {
+  transform: translateX(10px);
+}
+
 .act,
 .navbar ul li a:hover {
   color: var(--main-color) !important;
   border-bottom: 1px solid var(--main-color);
 }
+
 .theme-text {
   color: var(--main-color) !important;
 }
@@ -34,14 +62,16 @@
   height: 80vh;
   width: 70%;
 }
+
 .middle h1 {
   font-size: 70px;
 }
+
 .titre{
-  font-weight: ;
   text-align: center;
   
 }
+
 .ligne{
   background-color: black;
   height: 3px;
@@ -49,59 +79,93 @@
   margin-bottom: 30px;
   border-radius: 5px;
 }
-#info-principal{
+
+#info-principal {
   margin: 30px;
 }
+
+.text-primary,
+#info-principal h2
+{
+  font-weight: bold;
+}
+
+.carousel-inner {
+  border-radius: 10px;
+}
+
 #actualites{
   margin: 30px;
-}  
+} 
+
 #cards{
   margin: 30px;
 }
+
+.mb-3 {
+  border-radius: 5px;
+}
+
+.text-center {
+  font-weight: bold;
+}
+
 #dernieresVideo{
   margin: 30px;
 }
+
 #artistesAfrikZik{
   margin: 30px;
 }
+
 #arriere_fond{
   background-color: rgba(6, 83, 4, 0.774);
 }
+
 .fond{
   background-color: aliceblue;
 }
+
 .card{
   width: 100%;
 }
+
 .top_musique{
   padding-top: 10px;
   justify-content: center;
   align-items: center;
 }
+
 .bouton_play{
   width: 50px;
   justify-content: center;
   align-items: center;
 }
+
 .image{
   min-width: 40%;
 }
+
 .liste{
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
+
 .img_actuelites{
   justify-content: center;
   align-items: center;
 }
+
 .cards-parrent{
   width: 30%;
   background-color: #e6b30e;
 }
+
 .ii{
   width: 100%;
 }
+
 .img_play{
   position: absolute;
   width: 50px;
@@ -109,12 +173,14 @@
   margin-left: 40%;
   margin-top: 25%;
 }
+
 .liste{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .cercle{
   background-color: brown;
   border-radius: 50%;
@@ -123,67 +189,139 @@
   padding: 4px 0px 0px 13px;
   color: aliceblue;
 }
+
 .partie-1{
   display: block;
   width: 65%;
 }
+
 .partie-2{
   display: block;
   width: 34%;
 }
+
 .partie-2-1{
   display: block;
   width: 49%;
 }
+
 .partie-2-2{
   display: block;
   width: 50%;
 }
-.containerTopMusic{
+
+#containerTopMusic{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items:center ;
   gap: 9px;
 }
+
 .containerPrincipal{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
+
 .actualitesGauche{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
+
 .containerActualites{
   display: flex;
   flex-wrap: wrap;
 }
+
 .actualitesGauche{
   display: flex;
   flex-wrap: wrap;
 }
+
 .carte{
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  background-color: blue;
+  background-color: rgb(115, 115, 224);
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   width: 100%;
   border-radius: 5px;
   margin-bottom: 10px;
+  
 }
+
 .imageCarousel{
   height: 500px;
 }
+
 .imageActualite{
   width: 200px;
 }
 
+.liste .card, 
+.liste .card img {
+  border-radius: 10px;
+}
+
+/*Animation*/
+#header {
+  opacity: 0;
+  animation:fromUp 2s forwards;
+}
+
+.partie-1, .h2 {
+  opacity: 0;
+  animation: appear2 1s forwards;
+}
+
+.carte {
+  opacity: 0;
+  animation: appear 1s forwards;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear2 {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fromUp {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/*Media-Queries*/
 
 @media screen and (max-width: 1245px) {
   .containerPrincipal{display: block;}
@@ -191,30 +329,37 @@
     width: 90%;
     margin-left: 5%;
   }
+
   .partie-2{
     width: 90%;
     margin-left: 5%;
   }
+
   .containerActualites{display: block;}
   .partie-2-1{
     width: 90%;
     margin-left: 5%;
   }
+
   .partie-2-2{
     width: 90%;
     margin-left: 5%;
   }
   
 }
+
 @media screen and (max-width: 800px) {
   
   .imageCarousel{
     height: 450px;
-  }  
+  } 
+
 }
+
 @media screen and (max-width: 400px) {
   
   .imageCarousel{
     height: 300px;
   }  
+
 }
