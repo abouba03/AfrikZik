@@ -1,162 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootstrap 5 - Blog Cards</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <style>
-      .card img {
-        height: 280px;
-      }
-    </style>
-  </head>
-  <body class="bg-light">
-    <div class="container">
-      <div class="text-center my-5">
-        <h1>Bootstrap 5 - Blog Posts Grid Layout</h1>
-        <hr />
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="card mb-5 shadow-sm">
-            <img src="imgs/a.jpg" class="img-fluid" />
-
-            <div class="card-body">
-              <div class="card-title">
-                <h2>This is the blog title</h2>
-              </div>
-              <div class="card-text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Deleniti corporis quis ab. Exercitationem et quibusdam
-                  impedit? Sint vitae labore nulla sit, dignissimos non tempore,
-                  maxime facere, quod harum aliquid in...
-                </p>
-              </div>
-              <a href="#" class="btn btn-outline-primary rounded-0 float-end"
-                >Read More</a
-              >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <link rel="stylesheet" href="styleNewsPage.css">
+    <title>AfrikZik News</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand " href="#">AfrikZik</a>
+          
+          <div class="offcanvas offcanvas-start text-bg-dark taille" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header bg-dark hauteur-header">
+              <h5 class="offcanvas-title text-primary" id="offcanvasDarkNavbarLabel">Menu </h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body fond-sidebar">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item d-flex gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icons-sidebar" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
+                    <a class="nav-link " aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item  d-flex gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icons-sidebar" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+                        <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
+                        <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
+                    </svg>
+                    <a class="nav-link active" href="#">News</a>
+                </li>
+                <li class="nav-item d-flex gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icons-sidebar" fill="currentColor" class="bi bi-person-square" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"/>
+                    </svg>
+                    <a class="nav-link" href="#">Artistes</a>
+                </li>
+                <li class="nav-item d-flex gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg"  class="icons-sidebar" fill="currentColor" class="bi bi-music-note-list" viewBox="0 0 16 16">
+                        <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z"/>
+                        <path fill-rule="evenodd" d="M12 3v10h-1V3h1z"/>
+                        <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1V2.82z"/>
+                        <path fill-rule="evenodd" d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                    <a class="nav-link" href="#">Playlists</a>
+                </li>
+                <li class="nav-item d-flex gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icons-sidebar" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"/>
+                      </svg>
+                    <a class="nav-link" href="#">Videos</a>
+                </li>
             </div>
           </div>
         </div>
+    </nav>
 
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="card mb-5 shadow-sm">
-            <img src="imgs/b.jpg" class="img-fluid" />
-
-            <div class="card-body">
-              <div class="card-title">
-                <h2>This is the blog title</h2>
-              </div>
-              <div class="card-text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Deleniti corporis quis ab. Exercitationem et quibusdam
-                  impedit? Sint vitae labore nulla sit, dignissimos non tempore,
-                  maxime facere, quod harum aliquid in...
-                </p>
-              </div>
-              <a href="#" class="btn btn-outline-primary rounded-0 float-end"
-                >Read More</a
-              >
+    <div class="container-md marge">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>TOUTES LES NEWS </h1>
             </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="card mb-5 shadow-sm">
-            <img src="imgs/c.jpg" class="img-fluid" />
-
-            <div class="card-body">
-              <div class="card-title">
-                <h2>This is the blog title</h2>
-              </div>
-              <div class="card-text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Deleniti corporis quis ab. Exercitationem et quibusdam
-                  impedit? Sint vitae labore nulla sit, dignissimos non tempore,
-                  maxime facere, quod harum aliquid in...
-                </p>
-              </div>
-              <a href="#" class="btn btn-outline-primary rounded-0 float-end"
-                >Read More</a
-              >
+            <div class="col-md-12">
+                <h2>Toutes les news sur vos artistes préférés par catégories musicales.</h2>
             </div>
-          </div>
+        
         </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="card mb-5 shadow-sm">
-            <img src="imgs/d.jpg" class="img-fluid" />
-
-            <div class="card-body">
-              <div class="card-title">
-                <h2>This is the blog title</h2>
-              </div>
-              <div class="card-text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Deleniti corporis quis ab. Exercitationem et quibusdam
-                  impedit? Sint vitae labore nulla sit, dignissimos non tempore,
-                  maxime facere, quod harum aliquid in...
-                </p>
-              </div>
-              <a href="#" class="btn btn-outline-primary rounded-0 float-end"
-                >Read More</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="card mb-5 shadow-sm">
-            <img src="imgs/e.jpg" class="img-fluid" />
-
-            <div class="card-body">
-              <div class="card-title">
-                <h2>This is the blog title</h2>
-              </div>
-              <div class="card-text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Deleniti corporis quis ab. Exercitationem et quibusdam
-                  impedit? Sint vitae labore nulla sit, dignissimos non tempore,
-                  maxime facere, quod harum aliquid in...
-                </p>
-              </div>
-              <a href="#" class="btn btn-outline-primary rounded-0 float-end"
-                >Read More</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="card mb-5 shadow-sm">
-            <img src="imgs/f.jpg" class="img-fluid" />
-
-            <div class="card-body">
-              <div class="card-title">
-                <h2>This is the blog title</h2>
-              </div>
-              <div class="card-text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Deleniti corporis quis ab. Exercitationem et quibusdam
-                  impedit? Sint vitae labore nulla sit, dignissimos non tempore,
-                  maxime facere, quod harum aliquid in...
-                </p>
-              </div>
-              <a href="#" class="btn btn-outline-primary rounded-0 float-end"
-                >Read More</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </body>
+
+    <section id="section3" class="espace">
+        <div class="container-md ">
+            <div class="row">
+                <h2><span class="style-titre">D</span>èrnieres <span class="style-titre">N</span>ouvelles</h2>
+            </div>
+            <div class="row mx-auto">
+                <div class="col-md-4  mb-3">
+                    <div class="card bordure">
+                        <img src="/AfrikZik/PlayList Page/images/OIP (1).jpeg" class="card-img-top img-fluid taille-img-card" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, suscipit dolores. Provident dolor aperiam ratione eum est fuga blanditiis a quaerat accusamus, cum suscipit ducimus rerum minus atque aliquam molestiae!...</p>
+                            <div class="organiser">
+                              <a href="#">En savoir plus</a>
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icons-sidebar ii" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                              </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card bordure">
+                        <img src="/AfrikZik/PlayList Page/images/OIP.jpeg" class="card-img-top img-fluid taille-img-card" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptatum odit sequi consequatur iste et explicabo, nam nesciunt, doloremque, magnam dolores tenetur mollitia voluptates facilis ex asperiores sunt molestias ad....</p>
+                            <div class="organiser">
+                              <a href="#">En savoir plus</a>
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icons-sidebar ii" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                              </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card bordure" >
+                        <img src="/AfrikZik/PlayList Page/images/télécharger.jpeg" class="card-img-top img-fluid taille-img-card" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, a qui. Soluta error labore impedit accusantium, repellat quia cum deserunt officia eaque consectetur beatae ipsam non iure totam animi id!...</p>
+                            <div class="organiser">
+                              <a href="#">En savoir plus</a>
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icons-sidebar ii" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                              </svg>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-auto">
+              <div class="col-md-4  mb-3">
+                  <div class="card bordure">
+                      <img src="/AfrikZik/PlayList Page/images/OIP (1).jpeg" class="card-img-top img-fluid taille-img-card" alt="...">
+                      <div class="card-body">
+                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, suscipit dolores. Provident dolor aperiam ratione eum est fuga blanditiis a quaerat accusamus, cum suscipit ducimus rerum minus atque aliquam molestiae!...</p>
+                          <div class="organiser">
+                            <a href="#">En savoir plus</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icons-sidebar ii" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div class="card bordure">
+                      <img src="/AfrikZik/PlayList Page/images/OIP.jpeg" class="card-img-top img-fluid taille-img-card" alt="...">
+                      <div class="card-body">
+                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptatum odit sequi consequatur iste et explicabo, nam nesciunt, doloremque, magnam dolores tenetur mollitia voluptates facilis ex asperiores sunt molestias ad....</p>
+                          <div class="organiser">
+                            <a href="#">En savoir plus</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icons-sidebar ii" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div class="card bordure" >
+                      <img src="/AfrikZik/PlayList Page/images/télécharger.jpeg" class="card-img-top img-fluid taille-img-card" alt="...">
+                      <div class="card-body">
+                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, a qui. Soluta error labore impedit accusantium, repellat quia cum deserunt officia eaque consectetur beatae ipsam non iure totam animi id!...</p>
+                          <div class="organiser">
+                            <a href="#">En savoir plus</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icons-sidebar ii" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                          </div>
+                          
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="row mx-auto">
+              <div class="col-md-4  mb-3">
+                  <div class="card bordure">
+                      <img src="/AfrikZik/PlayList Page/images/OIP (1).jpeg" class="card-img-top img-fluid taille-img-card" alt="...">
+                      <div class="card-body">
+                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, suscipit dolores. Provident dolor aperiam ratione eum est fuga blanditiis a quaerat accusamus, cum suscipit ducimus rerum minus atque aliquam molestiae!...</p>
+                          <div class="organiser">
+                            <a href="#">En savoir plus</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icons-sidebar ii" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div class="card bordure">
+                      <img src="/AfrikZik/PlayList Page/images/OIP.jpeg" class="card-img-top img-fluid taille-img-card" alt="...">
+                      <div class="card-body">
+                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptatum odit sequi consequatur iste et explicabo, nam nesciunt, doloremque, magnam dolores tenetur mollitia voluptates facilis ex asperiores sunt molestias ad....</p>
+                          <div class="organiser">
+                            <a href="#">En savoir plus</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icons-sidebar ii" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div class="card bordure" >
+                      <img src="/AfrikZik/PlayList Page/images/télécharger.jpeg" class="card-img-top img-fluid taille-img-card" alt="...">
+                      <div class="card-body">
+                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, a qui. Soluta error labore impedit accusantium, repellat quia cum deserunt officia eaque consectetur beatae ipsam non iure totam animi id!...</p>
+                          <div class="organiser">
+                            <a href="#">En savoir plus</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icons-sidebar ii" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                          </div>
+                          
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script
+</body>
 </html>

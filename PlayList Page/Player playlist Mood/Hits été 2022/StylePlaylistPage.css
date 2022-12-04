@@ -10,11 +10,11 @@
   margin: 0;
 }
 :root{
-  --pink: #ff74a4;
-  --violet: #9f6ea3;
-  --lightblack: #515C6F;
-  --white: #ffffff;
-  --darkwhite: #cecaca;
+  --pink: green;
+  --violet: green;
+  --lightblack:aliceblue;
+  --white: rgba(0, 0, 0, 0.938);
+  --darkwhite:white;
   --pinkshadow: #ffcbdd;
   --lightbshadow: rgba(0,0,0,0.15);
 }
@@ -23,8 +23,78 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
+  background-color: rgba(0, 0, 0, 0.938);
 }
+h1{
+  font-family: 'Nerko One', cursive;
+  font-size: 50px;
+}
+h2{
+  font-family: 'Nerko One', cursive;
+}
+h4{
+  font-family: 'Nerko One', cursive;
+}
+body{
+  background-color: rgba(0, 0, 0, 0.938);
+  color: aliceblue;
+}
+.bordure{
+  border: 3px solid green;
+  background-color: rgba(0, 0, 0, 0.938);
+}
+a{
+  text-decoration: none;
+}
+.organiser{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.organisen-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.organisen-flex p{
+  padding-top: 15px;
+}
+.bordure-lien{
+  background-color: green;
+  border-radius: 30px;
+  padding: 0 20px 0 20px;
+}
+/*-----------------------------------------SideBar-----------------------------------------------------------------*/
+.taille{
+  width: 200px;
+}
+.hauteur-header{
+  height: 55px;
+}
+.icons-sidebar{
+  width: 20px;
+}
+.fond-sidebar{
+  background-color: green;
+}
+/*-----------------------------------------SideBar-----------------------------------------------------------------*/
+.marge{
+  margin-top: 100px;
+}
+.cadre{
+  background-color: green;
+  border-radius: 30px;
+}
+.imageCarousel{
+  height: 500px;
+}
+
+
+
+
 .wrapper{
   width: 380px;
   padding: 25px 30px;

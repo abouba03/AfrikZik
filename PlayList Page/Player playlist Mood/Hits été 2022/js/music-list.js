@@ -43,7 +43,7 @@ let allMusic = [
     {
       name: "Lost Sky - Vision NCS",
       artist: "NCS Release",
-      img: "music-6",
+      img: "music-6.jpeg",
       src: "music-6"
     },
     // like this paste it and remember to give comma after ending of this bracket }
