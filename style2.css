@@ -1,31 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
-::-webkit-scrollbar {
-  display: none;
+a {
+  text-decoration: none;
 }
-
+body {
+  background-color: rgba(0, 0, 0, 0.938);
+  color: aliceblue;
+}
 :root {
   --main-color: #e6b30e;
 }
-
-body {
-  /* margin: auto; */
-  background-image: url(images/bg5.webp);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: bottom center;
-  background-size: 100% auto;
-  position: relative;
-  /* backdrop-filter: blur(5px); */
+.act,
+.navbar ul li a:hover {
+  color: var(--main-color) !important;
+  border-bottom: 1px solid var(--main-color);
 }
-
+.theme-text {
+  color: var(--main-color) !important;
+}
+.middle {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 80vh;
+  width: 70%;
+}
+.middle h1 {
+  font-size: 70px;
+}
+.titre {
+  text-align: center;
+}
 #header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("images/bg.jpg");
@@ -35,331 +45,217 @@ body {
   height: 85vh;
   position: relative;
 }
-
-#containerTopMusic .carte {
-  transition: transform 5s ease-out;
+/*--------------------------------------------Section1--------------------------------------------------------*/
+#section1{
+  background-color: rgba(0, 0, 0, 0.938);
+  color:aliceblue;
+  padding: 10px;
 }
-
-#containerTopMusic .carte:hover {
-  transform: translateX(10px);
-}
-
-.act,
-.navbar ul li a:hover {
-  color: var(--main-color) !important;
-  border-bottom: 1px solid var(--main-color);
-}
-
-.theme-text {
-  color: var(--main-color) !important;
-}
-
-.middle {
+.lien{
+  color: aliceblue;
+  margin-top: 7px;
   
+}
+.boiteLien{
+  padding-top: 5px;
+  border: 2px solid green;
+  width: 150px;
+}
+/*--------------------------------------------info-principal-----------------------------------------------------*/
+#info-principal{
+  margin: 30px;
+  color:aliceblue;
+  padding: 10px;
+}
+.containerPrincipal{
   display: flex;
-  justify-content: start;
-  align-items: center;
-  height: 80vh;
-  width: 70%;
-}
-
-.middle h1 {
-  font-size: 70px;
-}
-
-.titre{
-  text-align: center;
-  
-}
-
-.ligne{
-  background-color: black;
-  height: 3px;
-  width: 250px;
-  margin-bottom: 30px;
-  border-radius: 5px;
-}
-
-#info-principal {
-  margin: 30px;
-}
-
-.text-primary,
-#info-principal h2
-{
-  font-weight: bold;
-}
-
-.carousel-inner {
-  border-radius: 10px;
-}
-
-#actualites{
-  margin: 30px;
-} 
-
-#cards{
-  margin: 30px;
-}
-
-.mb-3 {
-  border-radius: 5px;
-}
-
-.text-center {
-  font-weight: bold;
-}
-
-#dernieresVideo{
-  margin: 30px;
-}
-
-#artistesAfrikZik{
-  margin: 30px;
-}
-
-#arriere_fond{
-  background-color: rgba(6, 83, 4, 0.774);
-}
-
-.fond{
-  background-color: aliceblue;
-}
-
-.card{
+  flex-wrap: wrap;
   width: 100%;
 }
-
+.imageCarousel{
+  height: 500px;
+}
+.actualitesGauche{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.containerActualites{
+  display: flex;
+  flex-wrap: wrap;
+}
+.actualitesGauche{
+  display: flex;
+  flex-wrap: wrap;
+}
+.partie-1{
+  display: block;
+  width: 65%;
+}
+.partie-2{
+  display: block;
+  width: 34%;
+}
 .top_musique{
   padding-top: 10px;
   justify-content: center;
   align-items: center;
 }
-
-.bouton_play{
-  width: 50px;
-  justify-content: center;
-  align-items: center;
+.ligne{
+  background-color: green;
+  height: 3px;
+  width: 250px;
+  margin-bottom: 30px;
+  border-radius: 5px;
 }
-
-.image{
-  min-width: 40%;
-}
-
-.liste{
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.img_actuelites{
-  justify-content: center;
-  align-items: center;
-}
-
-.cards-parrent{
-  width: 30%;
-  background-color: #e6b30e;
-}
-
-.ii{
-  width: 100%;
-}
-
-.img_play{
-  position: absolute;
-  width: 50px;
- 
-  margin-left: 40%;
-  margin-top: 25%;
-}
-
-.liste{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.cercle{
-  background-color: brown;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  padding: 4px 0px 0px 13px;
-  color: aliceblue;
-}
-
-.partie-1{
-  display: block;
-  width: 65%;
-}
-
-.partie-2{
-  display: block;
-  width: 34%;
-}
-
-.partie-2-1{
-  display: block;
-  width: 49%;
-}
-
-.partie-2-2{
-  display: block;
-  width: 50%;
-}
-
-#containerTopMusic{
+.containerTopMusic{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items:center ;
   gap: 9px;
 }
-
-.containerPrincipal{
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.actualitesGauche{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.containerActualites{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.actualitesGauche{
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .carte{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 30px;
-  background-color: rgb(115, 115, 224);
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   width: 100%;
+  border: 2px solid green;
   border-radius: 5px;
   margin-bottom: 10px;
-  
 }
-
-.imageCarousel{
-  height: 500px;
+.cercle{
+  background-color: green;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 4px 0px 0px 13px;
+  color: aliceblue;
 }
-
-.imageActualite{
-  width: 200px;
+.img-play{
+  background-color: aliceblue;
 }
-
-.liste .card, 
-.liste .card img {
-  border-radius: 10px;
-}
-
-/*Animation*/
-#header {
-  opacity: 0;
-  animation:fromUp 2s forwards;
-}
-
-.partie-1, .h2 {
-  opacity: 0;
-  animation: appear2 1s forwards;
-}
-
-.carte {
-  opacity: 0;
-  animation: appear 1s forwards;
-}
-
-@keyframes appear {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes appear2 {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fromUp {
-  0% {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
-/*Media-Queries*/
-
 @media screen and (max-width: 1245px) {
   .containerPrincipal{display: block;}
   .partie-1{
     width: 90%;
     margin-left: 5%;
   }
-
   .partie-2{
     width: 90%;
     margin-left: 5%;
   }
-
-  .containerActualites{display: block;}
-  .partie-2-1{
-    width: 90%;
-    margin-left: 5%;
-  }
-
-  .partie-2-2{
-    width: 90%;
-    margin-left: 5%;
-  }
-  
 }
-
 @media screen and (max-width: 800px) {
-  
   .imageCarousel{
     height: 450px;
-  } 
-
+  }  
 }
-
 @media screen and (max-width: 400px) {
-  
   .imageCarousel{
     height: 300px;
   }  
-
+}
+/*--------------------------------------------events-----------------------------------------------------*/
+#events{
+  background-color: rgba(0, 0, 0, 0.938);
+  color:aliceblue;
+  padding: 20px 0 20px 0;
+  margin: 30px 0 30px 0;
+}
+.styleImg{
+  width: 100%;
+  height: 100%;
+}
+.contenueEvents{
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cadreEvents{
+  width: 300px;
+  height: 200px;
+}
+/*
+.faceCache{
+  position: absolute;
+  background-color: #e6b30e;
+  width: 300px;
+  height: 200px;
+}
+.faceCache p{
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  text-align: center;
+}
+*/
+/*--------------------------------------------Spectacles A Venir-----------------------------------------------------*/
+.imgConcert{
+  width: 100%;
+  height: auto;
+}
+.cadreDate{
+  border: 2px solid green;
+  margin-bottom: 10px;
+}
+.aa{
+  margin-top: 10px;
+}
+.souligne{
+  height: 3px;
+  width: 300px;
+  background-color: green;
+  border-radius: 10px;
+}
+#nomArtistes{
+  color: green;
+  font-weight: 900;
+  font-size: 20px;
+  font-style: oblique;
+  padding-left: 15px;
+}
+/*------------------------------------------Gang AfrikZik---------------------------------------------------*/
+#gangAfrikZik{
+  background-color: rgba(0, 0, 0, 0.938);
+  padding: 20px 0 20px 0;
+  margin: 30px 0 30px 0;
+}
+.img-profil{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.gris{
+  color: gray;
+}
+.carte-profil{
+  border: 2px solid green;
+  padding: 10px;
+}
+.reseau-social{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  top: 40px;
+}
+.reseau-social a{
+  color: aliceblue;
+}
+.liste-profil{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.espce{
+  margin-bottom: 500px;
 }

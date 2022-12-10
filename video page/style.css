@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap'); 
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: aliceblue;
+  }
+  h1{
+    font-family: 'Nerko One', cursive;
+    font-size: 100px;
+  }
+  h2{
+    font-family: 'Nerko One', cursive;
+  }
+  h4{
+    font-family: 'Nerko One', cursive;
+  }
+  body{
+    background-color: rgba(0, 0, 0, 0.938);
+    color: aliceblue;
+  }
+  .bordure{
+    border: 3px solid green;
+    background-color: rgba(0, 0, 0, 0.938);
+    margin-bottom: 10px;
+  }
+  a{
+    text-decoration: none;
+  }
+  .style-titre{
+    font-family: 'Nerko One', cursive;
+    font-size: 50px;
+    color: green;
+  }
+.listeVideo{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  /*-----------------------------------------SideBar-----------------------------------------------------------------*/
+  .taille{
+    width: 200px;
+  }
+  .hauteur-header{
+    height: 55px;
+  }
+  .icons-sidebar{
+    width: 20px;
+  }
+  .fond-sidebar{
+    background-color: green;
+  }
+  /*-----------------------------------------SideBar-----------------------------------------------------------------*/
+  .marge{
+    margin-top: 100px;
+  }
+  .cadre{
+    background-color: green;
+    border-radius: 30px;
+  }
+  .imageCarousel{
+    height: 300px;
+  }
+  /*-----------------------------------------section2-----------------------------------------------------------------*/
+
+  .taille-img-card{
+    width: 100%;
+    height: 300px;
+  }
