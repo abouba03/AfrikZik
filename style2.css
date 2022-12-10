@@ -136,6 +136,9 @@ body {
   padding: 4px 0px 0px 13px;
   color: aliceblue;
 }
+.img-play{
+  background-color: aliceblue;
+}
 @media screen and (max-width: 1245px) {
   .containerPrincipal{display: block;}
   .partie-1{
@@ -212,6 +215,13 @@ body {
   background-color: green;
   border-radius: 10px;
 }
+#nomArtistes{
+  color: green;
+  font-weight: 900;
+  font-size: 20px;
+  font-style: oblique;
+  padding-left: 15px;
+}
 /*------------------------------------------Gang AfrikZik---------------------------------------------------*/
 #gangAfrikZik{
   background-color: rgba(0, 0, 0, 0.938);
@@ -236,6 +246,9 @@ body {
   flex-direction: column;
   gap: 15px;
   top: 40px;
+}
+.reseau-social a{
+  color: aliceblue;
 }
 .liste-profil{
   display: flex;
