@@ -69,3 +69,10 @@
     padding-bottom: 55px;
 
   }
+  /*---------------------------------------------Animation-------------------------------------------------------*/
+  .decallage{
+    transition: transform 0.5s;
+  }
+  .decallage:hover{
+   transform: translateY(-15px);
+  }

@@ -1,28 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 a {
   text-decoration: none;
 }
+
 body {
   background-color: rgba(0, 0, 0, 0.938);
   color: aliceblue;
 }
+
 :root {
   --main-color: #e6b30e;
 }
+
 .act,
 .navbar ul li a:hover {
   color: var(--main-color) !important;
   border-bottom: 1px solid var(--main-color);
 }
+
 .theme-text {
   color: var(--main-color) !important;
 }
+
 .middle {
   display: flex;
   justify-content: start;
@@ -33,75 +44,103 @@ body {
 .middle h1 {
   font-size: 70px;
 }
+
 .titre {
   text-align: center;
 }
+
 #header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("images/bg.jpg");
+    url("/AfrikZik/images/bg.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;
   height: 85vh;
   position: relative;
 }
+
 /*--------------------------------------------Section1--------------------------------------------------------*/
 #section1{
   background-color: rgba(0, 0, 0, 0.938);
   color:aliceblue;
   padding: 10px;
 }
+
 .lien{
   color: aliceblue;
   margin-top: 7px;
-  
 }
+
+.liene {
+  border-radius: 3px;
+}
+
+.liene:hover {
+  background-color: green;
+  transition: 0.5s ease-out;
+  border-radius: 8px;
+}
+
 .boiteLien{
   padding-top: 5px;
   border: 2px solid green;
   width: 150px;
 }
+
 /*--------------------------------------------info-principal-----------------------------------------------------*/
 #info-principal{
   margin: 30px;
   color:aliceblue;
   padding: 10px;
 }
+
 .containerPrincipal{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
+
+.carousel-item img {
+  border-radius: 10px;
+}
+
 .imageCarousel{
   height: 500px;
 }
+
 .actualitesGauche{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
+
 .containerActualites{
   display: flex;
   flex-wrap: wrap;
 }
+
 .actualitesGauche{
   display: flex;
   flex-wrap: wrap;
 }
+
 .partie-1{
   display: block;
   width: 65%;
 }
+
 .partie-2{
   display: block;
   width: 34%;
 }
+
 .top_musique{
   padding-top: 10px;
   justify-content: center;
   align-items: center;
 }
+
 .ligne{
   background-color: green;
   height: 3px;
@@ -109,6 +148,7 @@ body {
   margin-bottom: 30px;
   border-radius: 5px;
 }
+
 .containerTopMusic{
   display: flex;
   flex-wrap: wrap;
@@ -116,6 +156,8 @@ body {
   align-items:center ;
   gap: 9px;
 }
+
+
 .carte{
   display: flex;
   flex-wrap: nowrap;
@@ -124,9 +166,16 @@ body {
   align-items: center;
   padding: 10px;
   width: 100%;
-  border: 2px solid green;
+  border: 2px solid rgba(0, 128, 0, 0.486);
   border-radius: 5px;
   margin-bottom: 10px;
+  transition: transform 0.5s;
+}
+
+.containerTopMusic .carte:hover {
+  transform: translateX(8px);
+  background-color: rgba(0, 128, 0, 0.486);
+  border: 1px solid rgba(0, 128, 0, 0.486);
 }
 .cercle{
   background-color: green;
@@ -136,30 +185,12 @@ body {
   padding: 4px 0px 0px 13px;
   color: aliceblue;
 }
+
 .img-play{
   background-color: aliceblue;
 }
-@media screen and (max-width: 1245px) {
-  .containerPrincipal{display: block;}
-  .partie-1{
-    width: 90%;
-    margin-left: 5%;
-  }
-  .partie-2{
-    width: 90%;
-    margin-left: 5%;
-  }
-}
-@media screen and (max-width: 800px) {
-  .imageCarousel{
-    height: 450px;
-  }  
-}
-@media screen and (max-width: 400px) {
-  .imageCarousel{
-    height: 300px;
-  }  
-}
+
+
 /*--------------------------------------------events-----------------------------------------------------*/
 #events{
   background-color: rgba(0, 0, 0, 0.938);
@@ -167,10 +198,12 @@ body {
   padding: 20px 0 20px 0;
   margin: 30px 0 30px 0;
 }
+
 .styleImg{
   width: 100%;
   height: 100%;
 }
+
 .contenueEvents{
   width: 90%;
   margin-left: 5%;
@@ -179,42 +212,60 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
+
 .cadreEvents{
   width: 300px;
   height: 200px;
+  padding: 3px;
 }
-/*
-.faceCache{
-  position: absolute;
-  background-color: #e6b30e;
-  width: 300px;
-  height: 200px;
+
+.cadreEvents img {
+  border-radius: 3px;
+  transition: transform 0.5s;
 }
-.faceCache p{
-  position: absolute;
-  top: 100px;
-  width: 100%;
-  text-align: center;
+
+.cadreDate,
+.partie_1 {
+  transition: transform 1s;
 }
-*/
-/*--------------------------------------------Spectacles A Venir-----------------------------------------------------*/
+
+.partie_1:hover {
+  transform: translate3d(-20px, -10px, -10px);  
+}
+
+.cadreDate:hover {
+  transform: translateX(10px);  
+}
+
+.cadreEvents img:hover {
+  transform: translateY(8px);
+}
+
+.cadreEvents .faceCache {
+  visibility: hidden;
+}
+
 .imgConcert{
   width: 100%;
   height: auto;
 }
+
 .cadreDate{
   border: 2px solid green;
   margin-bottom: 10px;
 }
+
 .aa{
   margin-top: 10px;
 }
+
 .souligne{
   height: 3px;
   width: 300px;
   background-color: green;
   border-radius: 10px;
 }
+
 #nomArtistes{
   color: green;
   font-weight: 900;
@@ -222,17 +273,20 @@ body {
   font-style: oblique;
   padding-left: 15px;
 }
+
 /*------------------------------------------Gang AfrikZik---------------------------------------------------*/
 #gangAfrikZik{
   background-color: rgba(0, 0, 0, 0.938);
   padding: 20px 0 20px 0;
   margin: 30px 0 30px 0;
 }
+
 .img-profil{
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
+
 .gris{
   color: gray;
 }
@@ -240,6 +294,7 @@ body {
   border: 2px solid green;
   padding: 10px;
 }
+
 .reseau-social{
   position: absolute;
   display: flex;
@@ -247,15 +302,121 @@ body {
   gap: 15px;
   top: 40px;
 }
+
 .reseau-social a{
   color: aliceblue;
 }
+
+.reseau-social a:hover {
+  transform: scale(1.3);
+  transition: transform 0.5s;
+}
+
 .liste-profil{
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
 }
+
 .espce{
   margin-bottom: 500px;
+}
+
+
+/* Animation */
+#header {
+  opacity: 0;
+  animation: fromUp 1.5s forwards;
+}
+
+#section1 {
+  opacity: 0;
+  animation: appear .8s forwards;
+}
+
+.partie-1 {
+  opacity: 0;
+  animation: appear .8s forwards;
+}
+
+#cards {
+  opacity: 0;
+  animation: appear 1s forwards;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes fromUp{
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* #cards:nth-child(1) {
+  animation-delay: 1s;
+}
+
+#cards:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+#cards:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+#cards:nth-child(4) {
+  animation-delay: 1.6s;
+}
+
+#cards:nth-child(5) {
+  animation-delay: 1.8s;
+} */
+
+/* Media Queries */
+@media screen and (max-width: 1245px) {
+  .containerPrincipal{display: block;}
+  .partie-1{
+    width: 90%;
+    margin-left: 5%;
+  }
+  
+  .partie-2{
+    width: 90%;
+    margin-left: 5%;
+  }
+  
+}
+
+@media screen and (max-width: 800px) {
+  .imageCarousel{
+    height: 450px;
+  }  
+  
+}
+
+@media screen and (max-width: 400px) {
+  .imageCarousel{
+    height: 300px;
+  }  
+  
 }

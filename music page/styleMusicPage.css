@@ -1,87 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap'); 
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: aliceblue;
+  }
+  h1{
+    font-family: 'Nerko One', cursive;
+    font-size: 100px;
+  }
+  h2{
+    font-family: 'Nerko One', cursive;
+  }
+  h4{
+    font-family: 'Nerko One', cursive;
+    color: gre;
+  }
+  body{
+    background-color: rgba(0, 0, 0, 0.938);
+    color: aliceblue;
+  }
+  .bordure{
+    border: 3px solid green;
+    background-color: rgba(0, 0, 0, 0.938);
+  }
+  a{
+    text-decoration: none;
+  }
+  .style-titre{
+    font-family: 'Nerko One', cursive;
+    font-size: 50px;
+    color: green;
+  }
+ 
+  /*-----------------------------------------SideBar-----------------------------------------------------------------*/
+  .taille{
+    width: 200px;
+  }
+  .hauteur-header{
+    height: 55px;
+  }
+  .icons-sidebar{
+    width: 20px;
+  }
+  .fond-sidebar{
+    background-color: green;
+  }
+  /*-----------------------------------------SideBar-----------------------------------------------------------------*/
+  .marge{
+    margin-top: 100px;
+  }
+  .partie1{
+    
+  }
+  .partie1 img{
+    width: 100%;
+    height: 600px;
+  }
+  
+ 
+/*-----------------------------------------section2-----------------------------------------------------------------*/
 
-    	body{
-    		background-color: #f7f7f7;
-    		font-family: Open sans;
-    	}
-    	img{
-    		width: 100%;
-    		min-height: 250px;
-    	}
-    	.main{
-    		padding: 40px 0;
-    	}
-    	.col-md-3{
-    		margin-bottom: 40px;
-    	}
-    	.album-poster{
-    		position: relative;
-    		display: block;
-    		border-radius: 7px;
-    		overflow: hidden;
-    		box-shadow: 0 15px 35px #3d2173a1;
-    		transition: all ease 0.4s;
-    	}
-    	.album-poster:hover{
-    		box-shadow: none;
-    		transform: scale(0.98) translateY(5px);
-    	}
-    	h3{
-    		font-size: 34px;
-    		margin-bottom: 34px;
-    		border-bottom: 4px solid #e6e6e6;
-    		padding-bottom: 15px;
-    	}
-    	p{
-    		font-size: 15px;
-    	}
-    	h4{
-    		font-size: 16px;
-    		text-transform: uppercase;
-    		margin-top: 15px;
-    		font-weight: 700;
-    	}
-		
-
-		/*default is hide music player*/
-		#aplayer{
-			position: fixed;
-			bottom: -100%;
-			left: 0;
-			width: 100%;
-			margin: 0;
-			box-shadow: 0 -2px 2px #dadada;
-			background-color: #fff;
-			transition: all ease 0.5s;
-		}
-		#aplayer.showPlayer{
-			bottom: 0;
-		}
-
-		
-		/*MUSIC PLAYER CUSTOMIZING STYLE*/
-		span{
-			color: #000 !important;
-			font-size: 16px;
-		}
-		.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded{
-			background: #e0e0e0;
-    		height: 4px;
-		}
-		.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played{
-			height: 4px;
-			background-color: #2196F3 !important;
-		}
-		.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb{
-			background-color: #2196F3 !important;
-		}
-
-		.aplayer .aplayer-icon{
-			width: 20px;
-			height: 20px;
-		}
-		.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
-		    fill: #000;
-		}
-		.aplayer .aplayer-info .aplayer-music{
-			margin-bottom: 5px;
-		}
+  .taille-img-card{
+    width: 100%;
+    height: 300px;
+  }
+  /*-----------------------------------------section3-----------------------------------------------------------------*/
+  .espace{
+    margin: 30px 0 30px 0;
+  }
+  .container{margin-top:100px}
+  .box1 img,.box1:after,.box1:before{width:100%;transition:all .3s ease 0s}
+  .box1 .icon,.box2,.box3,.box4,.box5 .icon li a{text-align:center}
+  .box10:after,.box10:before,.box1:after,.box1:before,.box2 .inner-content:after,.box3:after,.box3:before,.box4:before,.box5:after,.box5:before,.box6:after,.box7:after,.box7:before{content:""}
+  .box1,.box11,.box12,.box13,.box14,.box16,.box17,.box18,.box2,.box20,.box21,.box3,.box4,.box5,.box5 .icon li a,.box6,.box7,.box8{overflow:hidden}
+  .box1 .title,.box10 .title,.box4 .title,.box7 .title{letter-spacing:1px}
+  .box3 .post,.box4 .post,.box5 .post,.box7 .post{font-style:italic}
+  .mt-30{margin-top:30px}
+  .mt-40{margin-top:40px}
+  .mb-30{margin-bottom:30px}
+  .box1 .icon,.box1 .title{margin:0;position:absolute}
+  .box1{box-shadow:0 0 3px rgba(0,0,0,.3);position:relative}
+  .box1:after,.box1:before{height:50%;background:rgba(0,0,0,.5);position:absolute;top:0;left:0;z-index:1;transform-origin:100% 0;transform:rotateZ(90deg)}
+  .box1:after{top:auto;bottom:0;transform-origin:0 100%}
+  .box1:hover:after,.box1:hover:before{transform:rotateZ(0)}
+  .box1 img{height:auto;transform:scale(1) rotate(0)}
+  .box1:hover img{filter:sepia(80%);transform:scale(1.3) rotate(10deg)}
+  .box1 .title{font-size:19px;font-weight:600;color:#fff;text-transform:uppercase;text-shadow:0 0 1px #004cbf;bottom:10px;left:10px;opacity:0;z-index:2;transform:scale(0);transition:all .5s ease .2s}
+  
+  .box1:hover .title{opacity:1;transform:scale(1)}
+  .box1 .icon{padding:7px 5px;list-style:none;background:green;border-radius:0 0 0 10px;top:-100%;right:0;z-index:2;transition:all .3s ease .2s}
+  .box1:hover .icon{top:0}
+  .box1 .icon li{display:block;margin:10px 0}
+  .box1 .icon li a{display:block;width:35px;height:35px;line-height:35px;border-radius:10px;font-size:18px;color:#fff;transition:all .3s ease 0s}
+  .box2 .icon li a,.box3 .icon a:hover,.box4 .icon li a:hover,.box5 .icon li a,.box6 .icon li a{border-radius:50%}
+  .box1 .icon li a:hover{color:#fff;box-shadow:0 0 10px #000 inset,0 0 0 3px #fff}
+  @media only screen and (max-width:990px){
+	.box1{margin-bottom:30px}
+}
+  /*---------------------------------------------Animation-------------------------------------------------------*/
+  .decallage{
+    transition: transform 0.5s;
+  }
+  .decallage:hover{
+   transform: translateY(-15px);
+  }

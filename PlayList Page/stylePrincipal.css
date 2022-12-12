@@ -67,3 +67,10 @@
   .espace{
     margin: 30px 0 30px 0;
   }
+  /*---------------------------------------------Animation-------------------------------------------------------*/
+  .decallage{
+    transition: transform 0.5s;
+  }
+  .decallage:hover{
+   transform: translateY(-15px);
+  }
